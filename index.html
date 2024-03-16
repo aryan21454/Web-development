@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-md">
+    <div class="container mx-auto py-8 ">
+        <h1 class="text-5xl font-bold mb-4 text-center">Calculator</h1>
+        <div class="flex flex-col items-center bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg p-4 shadow-lg">
+            <input type="text" id="display" class="w-full mb-4 p-2 text-center border border-gray-300 rounded-md" disabled>
+            <div class="grid grid-cols-4 gap-2">
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(7)">7</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(8)">8</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(9)">9</button>
+                <button class="btn  bg-yellow-300 rounded text-gray-800" onclick="appendOperator('+')">+</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(4)">4</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(5)">5</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(6)">6</button>
+                <button class="btn  bg-yellow-300 rounded  text-gray-800" onclick="appendOperator('-')">-</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(1)">1</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(2)">2</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(3)">3</button>
+                <button class="btn  bg-yellow-300 rounded  text-gray-800" onclick="appendOperator('*')">*</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="appendDigit(0)">0</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="clearDisplay()">C</button>
+                <button class="btn border-2 border-blue-900 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-900 text-white font-semibold py-2 px-4 rounded-md shadow-md" onclick="calculate()">=</button>
+                <button class="btn  bg-yellow-300 rounded  text-gray-800" onclick="appendOperator('/')">/</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
